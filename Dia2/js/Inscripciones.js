@@ -113,16 +113,17 @@ function mostrarMenu() {
     let opcion;
     while (opcion !== "6") {
         console.log("=== MENÚ Coordinador ===");
-        console.log("1. Agregar dato");
-        console.log("2. Mostrar datos");
-        console.log("3. Actualizar dato");
-        console.log("4. Eliminar dato");
+        console.log("1. Agregar camper");
+        console.log("2. Mostrar camper");
+        console.log("3. Actualizar camper");
+        console.log("4. Eliminar camper");
         console.log("5. Prueba Inicial");
         console.log("6. Salir");
-        console.log("7. Notas de modulo 1")
-        console.log("8. Notas de modulo 2")
-        console.log("9. Notas de modulo 3")
-        console.log("10. Notas de modulo 4")
+        console.log("7. Notas de modulo 1");
+        console.log("8. Notas de modulo 2");
+        console.log("9. Notas de modulo 3");
+        console.log("10. Notas de modulo 4");
+        console.log("11. Modulo Trainer");
     }
 
         opcion = prompt("Seleccione una opción del menú:");
@@ -172,6 +173,37 @@ function mostrarMenu() {
                 let indiceModulo3 = parseInt(prompt("Ingrese el índice del camper que desee colocar las notas del modulo 4:")) - 1;
                 Modulos3(indiceModulo3);
                 break;
+            case "11":
+                while (opcionT !== "5"){
+                    console.log("=== MENÚ Trainer ===");
+                    console.log("1. Agregar Trainer");
+                    console.log("2. Mostrar Trainer");
+                    console.log("3. Actualizar Trainer");
+                    console.log("4. Eliminar Trainer");
+                    console.log("5. Salir del modulo");
+                }
+                let opcionT = prompt("Seleccione una opción del menú:")
+                switch (opcionT){
+                    case "1":
+                        agregarDatoT();
+                        break;
+                    case "2":
+                        mostrarDatosT();
+                        break;
+                    case "3":
+                        mostrarDatosT();
+                        let indiceActualizarT = parseInt(prompt("Ingrese el índice del Trainer que desea actualizar:")) - 1;
+                        actualizarDatoT(indiceActualizarT);
+                        break;
+                    case "4":
+                        mostrarDatosT();
+                        let indiceEliminarT = parseInt(prompt("Ingrese el índice del Trainer que desea actualizar:")) - 1;
+                        eliminarDatoT(indiceEliminarT);
+                    case "5":
+                        console.log("Saliendo del programa...");
+                        break;
+                }
+
             default:
                 console.log("Opción inválida.");
         }
@@ -451,7 +483,92 @@ function Modulos3(index){
         console.log("Índice fuera de rango o datos no encontrados.");
     }
 }
+function agregarDatoT() {
+    let id = prompt("Ingrese el número de identificación del Trainer:");
+    let nombres = prompt("Ingrese los nombres del Trainer:");
+    let apellidos = prompt("Ingrese los apellidos del Trainer:");
+    let direccion = prompt("Ingrese la dirección del Trainer:");
+    let celular = prompt("Ingrese el número de celular del Trainer:");
+    let fijo = prompt("Ingrese el número fijo del Trainer:");
 
+    let nuevoDato = {
+        id: id,
+        nombres: nombres,
+        apellidos: apellidos,
+        direccion: direccion,
+        telefonos: {
+            celular: celular,
+            fijo: fijo
+        }
+    };
+
+    datos.push(nuevoDato);
+    localStorage.setItem('datos', JSON.stringify(datos)); // Guardar en localStorage
+    console.log("Datos agregados correctamente.");
+}
+
+function mostrarDatosT() {
+    console.log("Datos actuales:");
+    datos.forEach((dato, index) => {
+        console.log(`${index + 1}.`);
+        console.log(`   ID: ${dato.id}`);
+        console.log(`   Nombres: ${dato.nombres}`);
+        console.log(`   Apellidos: ${dato.apellidos}`);
+        console.log(`   Dirección: ${dato.direccion}`);
+        console.log(`   Teléfono Celular: ${dato.telefonos.celular}`);
+        console.log(`   Teléfono Fijo: ${dato.telefonos.fijo}`);
+    });
+}
+
+function actualizarDatoT(index) {
+    if (index >= 0 && index < datos.length) {
+        let dato = datos[index];
+        console.log("Datos actuales antes de la actualización:");
+        console.log(datos); // Mostrar los datos actuales antes de la actualización
+
+        // Solicitar al usuario qué dato desea actualizar y el nuevo valor
+        let opcion = prompt("¿Qué dato desea actualizar? (ID, Nombres, Apellidos, Dirección, Acudiente, Celular, Fijo)");
+        let nuevoValor = prompt(`Ingrese el nuevo valor para ${opcion}:`);
+
+        // Verificar si la opción ingresada es válida y actualizar el dato correspondiente
+        if (opcion === "ID" || opcion === "Nombres" || opcion === "Apellidos" || opcion === "Dirección" || opcion === "Acudiente" || opcion === "Celular" || opcion === "Fijo") {
+            // Convertir la opción a minúsculas para acceder a la propiedad correspondiente del objeto
+            dato[opcion.toLowerCase()] = nuevoValor;
+
+            // Guardar los datos actualizados en localStorage
+            localStorage.setItem('datos', JSON.stringify(datos));
+            console.log("Datos actualizados después de la actualización:");
+            console.log(datos); // Mostrar los datos actualizados después de la actualización
+
+            // Informar al usuario que el dato ha sido actualizado correctamente
+            console.log("Dato actualizado correctamente.");
+        } else {
+            // Informar al usuario si la opción ingresada no es válida
+            console.log("Opción inválida.");
+        }
+    } else {
+        console.log("Índice fuera de rango o datos no encontrados.");
+    }
+}
+
+
+// Función para eliminar un dato del array y actualizar en localStorage
+function eliminarDatoT(index) {
+    // Verificar si el índice proporcionado está dentro del rango válido
+    if (index >= 0 && index < datos.length) {
+        // Eliminar el dato en la posición especificada por el índice
+        datos.splice(index, 1);
+        
+        // Actualizar los datos en localStorage
+        localStorage.setItem('datos', JSON.stringify(datos));
+        
+        // Informar al usuario que el dato ha sido eliminado correctamente
+        console.log("Dato eliminado correctamente.");
+    } else {
+        // Informar al usuario si el índice está fuera de rango
+        console.log("Índice fuera de rango.");
+    }
+}
 
 // Ejemplo de uso
 let datos = []; // Array para almacenar los datos
