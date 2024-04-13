@@ -6,7 +6,8 @@ function agregarDato() {
     let direccion = prompt("Ingrese la dirección del camper:");
     let celular = prompt("Ingrese el número de celular del camper:");
     let fijo = prompt("Ingrese el número fijo del camper:");
-    let estado = null
+    let estado = "Inscrito"
+    let modulo = null
 
     let nuevoDato = {
         id: id,
@@ -17,7 +18,8 @@ function agregarDato() {
             celular: celular,
             fijo: fijo
         },
-        estado: estado
+        estado: estado,
+        modulo: modulo
     };
 
     datos.push(nuevoDato);
@@ -50,6 +52,7 @@ function mostrarDatos() {
         console.log(`   Teléfono Celular: ${dato.telefonos.celular}`);
         console.log(`   Teléfono Fijo: ${dato.telefonos.fijo}`);
         console.log(`   Estado: ${dato.estado}`)
+        console.log(`   Modulo: ${dato.modulo}`)
     });
 }
 
@@ -109,13 +112,18 @@ function eliminarDato(index) {
 function mostrarMenu() {
     let opcion;
     while (opcion !== "6") {
-        console.log("=== MENÚ ===");
+        console.log("=== MENÚ Coordinador ===");
         console.log("1. Agregar dato");
         console.log("2. Mostrar datos");
         console.log("3. Actualizar dato");
         console.log("4. Eliminar dato");
         console.log("5. Prueba Inicial");
         console.log("6. Salir");
+        console.log("7. Notas de modulo 1")
+        console.log("8. Notas de modulo 2")
+        console.log("9. Notas de modulo 3")
+        console.log("10. Notas de modulo 4")
+    }
 
         opcion = prompt("Seleccione una opción del menú:");
 
@@ -144,13 +152,33 @@ function mostrarMenu() {
             case "6":
                 console.log("Saliendo del programa...");
                 break;
+            case "7":
+                mostrarDatos();
+                let indiceModulo = parseInt(prompt("Ingrese el índice del camper que desee colocar las notas del modulo 1:")) - 1;
+                Modulos(indiceModulo);
+                break;
+            case "8":
+                mostrarDatos();
+                let indiceModulo1 = parseInt(prompt("Ingrese el índice del camper que desee colocar las notas del modulo 2:")) - 1;
+                Modulos1(indiceModulo1);
+                break;
+            case "9":
+                mostrarDatos();
+                let indiceModulo2 = parseInt(prompt("Ingrese el índice del camper que desee colocar las notas del modulo 3:")) - 1;
+                Modulos2(indiceModulo2);
+                break;
+            case "10":
+                mostrarDatos();
+                let indiceModulo3 = parseInt(prompt("Ingrese el índice del camper que desee colocar las notas del modulo 4:")) - 1;
+                Modulos3(indiceModulo3);
+                break;
             default:
                 console.log("Opción inválida.");
         }
     }
-}
 
-// Función para limpiar todos los datos del array y de localStorage
+
+
 function limpiarDatos() {
     datos = [];
     localStorage.removeItem('datos');
@@ -170,9 +198,10 @@ function PruebaInicial(index) {
 
         if (!isNaN(notaFinal)) {
             if (notaFinal >= 60) {
-                dato.estado = "Aprobado"; // Modificar el estado del objeto dato
+                dato.estado = "Aprobado";
+                dato.modulo = "Fundamentos de programación"
             } else {
-                dato.estado = "Reprobado"; // Modificar el estado del objeto dato
+                dato.estado = "Reprobado"; 
             }
 
             // Guardar los datos actualizados en localStorage
@@ -190,6 +219,238 @@ function PruebaInicial(index) {
     }
 }
 
+function Modulos(index){
+    if (index >= 0 && index < datos.length){
+        let dato = datos[index];
+        console.log("Datos antes de la actualización:");
+        console.log(datos);
+
+        let opcion1 = prompt("Ingrese el valor de la nota Practica");
+        let nota1 = opcion1 * 0.6
+        let opcion2 = prompt("Ingrese el valor de la nota Teorica");
+        let nota2 = opcion2 * 0.3
+        let opcion3 = prompt("Ingresa cuantas notas de quizes y trabajos tiene el camper");
+        let totalNotas = 0;
+        // Comprobar si la entrada es un número válido
+        if (!isNaN(opcion3) && opcion3 > 0) {
+            // Iterar sobre el número de notas ingresadas
+            for (let i = 1; i <= opcion3; i++) {
+                // Solicitar al usuario que ingrese la nota
+                let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+                
+                // Comprobar si la entrada es un número válido
+                if (!isNaN(nota)) {
+                    // Sumar la nota al total acumulado
+                    totalNotas += nota;
+                } else {
+                    console.log(`La nota ${i} no es un número válido. Se ignorará.`);
+                }
+            }
+
+        } else {
+            console.log("La cantidad de notas ingresada no es válida.");
+        }
+        let nota3 = totalNotas * 0.1
+
+        let notaFinal = nota1 + nota2 + nota3
+
+        if (!isNaN(notaFinal)) {
+            if (notaFinal >= 60) {
+                dato.estado = "Cursando";
+                dato.modulo = "Programación Web"
+            } else { 
+                dato.estado = "Reprobado";
+                dato.modulo = "Expulsado"
+            }
+
+            // Guardar los datos actualizados en localStorage
+            localStorage.setItem('datos', JSON.stringify(datos));
+
+            console.log("Datos después de la actualización:");
+            console.log(datos);
+
+            console.log("Dato actualizado correctamente.");
+        } else {
+            console.log("Las opciones ingresadas no son válidas.");
+        }
+    } else {
+        console.log("Índice fuera de rango o datos no encontrados.");
+    }
+}
+function Modulos1(index){
+    if (index >= 0 && index < datos.length){
+        let dato = datos[index];
+        console.log("Datos antes de la actualización:");
+        console.log(datos);
+
+        let opcion1 = prompt("Ingrese el valor de la nota Practica");
+        let nota1 = opcion1 * 0.6
+        let opcion2 = prompt("Ingrese el valor de la nota Teorica");
+        let nota2 = opcion2 * 0.3
+        let opcion3 = prompt("Ingresa cuantas notas de quizes y trabajos tiene el camper");
+        let totalNotas = 0;
+        // Comprobar si la entrada es un número válido
+        if (!isNaN(opcion3) && opcion3 > 0) {
+            // Iterar sobre el número de notas ingresadas
+            for (let i = 1; i <= opcion3; i++) {
+                // Solicitar al usuario que ingrese la nota
+                let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+                
+                // Comprobar si la entrada es un número válido
+                if (!isNaN(nota)) {
+                    // Sumar la nota al total acumulado
+                    totalNotas += nota;
+                } else {
+                    console.log(`La nota ${i} no es un número válido. Se ignorará.`);
+                }
+            }
+
+        } else {
+            console.log("La cantidad de notas ingresada no es válida.");
+        }
+        let nota3 = totalNotas * 0.1
+
+        let notaFinal = nota1 + nota2 + nota3
+
+        if (!isNaN(notaFinal)) {
+            if (notaFinal >= 60) {
+                dato.estado = "Cursando";
+                dato.modulo = "Programación formal"
+            } else { 
+                dato.estado = "Reprobado";
+                dato.modulo = "Expulsado"
+            }
+
+            // Guardar los datos actualizados en localStorage
+            localStorage.setItem('datos', JSON.stringify(datos));
+
+            console.log("Datos después de la actualización:");
+            console.log(datos);
+
+            console.log("Dato actualizado correctamente.");
+        } else {
+            console.log("Las opciones ingresadas no son válidas.");
+        }
+    } else {
+        console.log("Índice fuera de rango o datos no encontrados.");
+    }
+}
+function Modulos2(index){
+    if (index >= 0 && index < datos.length){
+        let dato = datos[index];
+        console.log("Datos antes de la actualización:");
+        console.log(datos);
+
+        let opcion1 = prompt("Ingrese el valor de la nota Practica");
+        let nota1 = opcion1 * 0.6
+        let opcion2 = prompt("Ingrese el valor de la nota Teorica");
+        let nota2 = opcion2 * 0.3
+        let opcion3 = prompt("Ingresa cuantas notas de quizes y trabajos tiene el camper");
+        let totalNotas = 0;
+        // Comprobar si la entrada es un número válido
+        if (!isNaN(opcion3) && opcion3 > 0) {
+            // Iterar sobre el número de notas ingresadas
+            for (let i = 1; i <= opcion3; i++) {
+                // Solicitar al usuario que ingrese la nota
+                let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+                
+                // Comprobar si la entrada es un número válido
+                if (!isNaN(nota)) {
+                    // Sumar la nota al total acumulado
+                    totalNotas += nota;
+                } else {
+                    console.log(`La nota ${i} no es un número válido. Se ignorará.`);
+                }
+            }
+
+        } else {
+            console.log("La cantidad de notas ingresada no es válida.");
+        }
+        let nota3 = totalNotas * 0.1
+
+        let notaFinal = nota1 + nota2 + nota3
+
+        if (!isNaN(notaFinal)) {
+            if (notaFinal >= 60) {
+                dato.estado = "Cursando";
+                dato.modulo = "Bases de datos"
+            } else { 
+                dato.estado = "Reprobado";
+                dato.modulo = "Expulsado"
+            }
+
+            // Guardar los datos actualizados en localStorage
+            localStorage.setItem('datos', JSON.stringify(datos));
+
+            console.log("Datos después de la actualización:");
+            console.log(datos);
+
+            console.log("Dato actualizado correctamente.");
+        } else {
+            console.log("Las opciones ingresadas no son válidas.");
+        }
+    } else {
+        console.log("Índice fuera de rango o datos no encontrados.");
+    }
+}
+function Modulos3(index){
+    if (index >= 0 && index < datos.length){
+        let dato = datos[index];
+        console.log("Datos antes de la actualización:");
+        console.log(datos);
+
+        let opcion1 = prompt("Ingrese el valor de la nota Practica");
+        let nota1 = opcion1 * 0.6
+        let opcion2 = prompt("Ingrese el valor de la nota Teorica");
+        let nota2 = opcion2 * 0.3
+        let opcion3 = prompt("Ingresa cuantas notas de quizes y trabajos tiene el camper");
+        let totalNotas = 0;
+        // Comprobar si la entrada es un número válido
+        if (!isNaN(opcion3) && opcion3 > 0) {
+            // Iterar sobre el número de notas ingresadas
+            for (let i = 1; i <= opcion3; i++) {
+                // Solicitar al usuario que ingrese la nota
+                let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+                
+                // Comprobar si la entrada es un número válido
+                if (!isNaN(nota)) {
+                    // Sumar la nota al total acumulado
+                    totalNotas += nota;
+                } else {
+                    console.log(`La nota ${i} no es un número válido. Se ignorará.`);
+                }
+            }
+
+        } else {
+            console.log("La cantidad de notas ingresada no es válida.");
+        }
+        let nota3 = totalNotas * 0.1
+
+        let notaFinal = nota1 + nota2 + nota3
+
+        if (!isNaN(notaFinal)) {
+            if (notaFinal >= 60) {
+                dato.estado = "Cursando";
+                dato.modulo = "Backend"
+            } else { 
+                dato.estado = "Reprobado";
+                dato.modulo = "Expulsado"
+            }
+
+            // Guardar los datos actualizados en localStorage
+            localStorage.setItem('datos', JSON.stringify(datos));
+
+            console.log("Datos después de la actualización:");
+            console.log(datos);
+
+            console.log("Dato actualizado correctamente.");
+        } else {
+            console.log("Las opciones ingresadas no son válidas.");
+        }
+    } else {
+        console.log("Índice fuera de rango o datos no encontrados.");
+    }
+}
 
 
 // Ejemplo de uso
