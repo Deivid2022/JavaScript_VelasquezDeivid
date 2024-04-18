@@ -10,10 +10,8 @@ class Usuario{
 }
 
 const Usuario1 = new Usuario('Deivid', 'Futbol');
-const Usuario2 = new Usuario('Brayan', 'Tennis');
 
 Usuario1.saludar();
-Usuario2.saludar();
 
 class Coche {
     constructor(marca, modelo, año, color) {
@@ -22,14 +20,10 @@ class Coche {
       this.año = año;
       this.color = color;
     }
-  
-    conducir() {
-      console.log(`El coche de marca ${this.marca}, modelo ${this.modelo}, año ${this.año} y color ${this.color} está en movimiento.`);
-    }
   }
   
 const coche = new Coche("Toyota", "Corolla", 2022, "rojo");
-coche.conducir()
+console.log(coche)
 
 class Libro {
 constructor(titulo, autor, genero, paginas) {
