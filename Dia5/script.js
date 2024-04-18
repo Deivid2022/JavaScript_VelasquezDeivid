@@ -9,7 +9,7 @@ function printSolution(board) {
   for (let i = 0; i < N; i++) {
     let row = '';
     for (let j = 0; j < N; j++) {
-      // Representa las reinas como 'Q' y las casillas vacías como '.'
+      // Representa las reinas como 'R' y las casillas vacías como '0'
       row += board[i][j] ? 'R ' : '0 ';
     }
     console.log(row);
@@ -77,5 +77,7 @@ function solveNQ(startRow, startCol) {
   return true;
 }
 
-// Ejemplo de uso: solveNQ(0, 2) para colocar la primera reina en la fila 0, columna 2
+
+//let c = prompt("Ingresa en que columna va a quedar la reina:");
+//let f = prompt("Ingresa en que fila va a quedar la reina:");
 solveNQ(0, 0);
