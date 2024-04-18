@@ -24,7 +24,7 @@ class Coche {
     }
   
     conducir() {
-      console.log("El coche está en movimiento.");
+      console.log(`El coche de marca ${this.marca}, modelo ${this.modelo}, año ${this.año} y color ${this.color} está en movimiento.`);
     }
   }
   
@@ -40,7 +40,7 @@ constructor(titulo, autor, genero, paginas) {
 }
 
     leer() {
-        console.log("Estoy leyendo el libro.");
+        console.log(`Estoy leyendo el libro ${this.titulo}, del autor ${this.autor}, del genero ${this.genero} y contiene ${this.paginas} paginas.`);
     }
 }
 
