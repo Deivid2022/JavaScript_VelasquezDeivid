@@ -52,7 +52,9 @@ function solveNQUtil(board, col) {
       board[i][col] = 1;
 
       // Recurre para colocar el resto de las reinas
-      if (solveNQUtil(board, col + 1)) return true;
+      if (solveNQUtil(board, col + 1)) 
+      
+      return true;
 
       // Si colocar la reina en board[i][col] no conduce a una solución, retrocede
       board[i][col] = 0;

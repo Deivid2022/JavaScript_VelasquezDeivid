@@ -10,8 +10,8 @@ class Usuario{
 }
 
 const Usuario1 = new Usuario('Deivid', 'Futbol');
-
 Usuario1.saludar();
+
 
 class Coche {
     constructor(marca, modelo, año, color) {
