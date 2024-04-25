@@ -8,68 +8,68 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
         .then(data => {
             const template = `
             <table class="table table-bordered border-primary table-secondary">
-                <th><strong>Name:</strong>
-                <th>${data.name}</th>
+                    <th><strong>Name:</strong>
+                    <th>${data.name}</th>
                 <tr>
-                <th><strong>Height:</strong> </th>
-                <th>${data.height}</th>
+                    <th><strong>Height:</strong> </th>
+                    <th>${data.height}</th>
                 </tr> 
                 <tr>
-                <th><strong>mass:</strong></th>
-                <th>${data.mass}</th>
+                    <th><strong>mass:</strong></th>
+                    <th>${data.mass}</th>
                 </tr>
                 <tr>
-                <th><strong>Hair color:</strong></th>
-                <th>${data.hair_color}</th>
+                    <th><strong>Hair color:</strong></th>
+                    <th>${data.hair_color}</th>
                 </tr>
                 <tr>
-                <th><strong>skin color:</strong></th>
-                <th>${data.skin_color}</th>
+                    <th><strong>skin color:</strong></th>
+                    <th>${data.skin_color}</th>
                 </tr>
                 <tr>
-                <th><strong>eye color:</strong></th>
-                <th>${data.eye_color}</th>
+                    <th><strong>eye color:</strong></th>
+                    <th>${data.eye_color}</th>
                 </tr>
                 <tr>
-                <th><strong>Birthday:</strong> </th>
-                <th>${data.birth_year}</th>
+                    <th><strong>Birthday:</strong> </th>
+                    <th>${data.birth_year}</th>
                 </tr>
                 <tr>
-                <th><strong>Gender:</strong></th>
-                <th>${data.gender}</th>
+                    <th><strong>Gender:</strong></th>
+                    <th>${data.gender}</th>
                 </tr>
                 <tr>
-                <th><strong>Born world:</strong></th>
-                <th><p id="homeworldInfo"></p></th>
+                    <th><strong>Born world:</strong></th>
+                    <th><p id="homeworldInfo"></p></th> 
                 </tr>
                 <tr>
-                <th><strong>Movies:</strong></th>
-                <th><p id="filmsList"></p></th>
+                    <th><strong>Movies:</strong></th>
+                    <th><p id="filmsList"></p></th>
                 </tr>
                 <tr>
-                <th><strong>Species:</strong></th>
-                <th><p id="speciesList"></p></th>
+                    <th><strong>Species:</strong></th>
+                    <th><p id="speciesList"></p></th>
                 </tr>
                 <tr>
-                <th><strong>vehicles:</strong></th>
-                <th><p id="vehicleslist"></p></th>
+                    <th><strong>vehicles:</strong></th>
+                    <th><p id="vehicleslist"></p></th>
                 </tr>
                 <tr>
                 <tr>
-                <th><strong>Starships:</strong></th>
-                <th><p id="starshipsList"></p></th>
+                    <th><strong>Starships:</strong></th>
+                    <th><p id="starshipsList"></p></th>
                 </tr>
                 <tr>
-                <th><strong>Created:</strong> </th>
-                <th>${data.created}</th>
+                    <th><strong>Created:</strong> </th>
+                    <th>${data.created}</th>
                 </tr>
                 <tr>
-                <th><strong>last edited:</strong></th>
-                <th>${data.edited}</th>
+                    <th><strong>last edited:</strong></th>
+                    <th>${data.edited}</th>
                 </tr>
                 <tr>
-                <th><strong>URL:</strong> </th>
-                <th>${data.url}</th>
+                    <th><strong>URL:</strong> </th>
+                    <th>${data.url}</th>
                 </tr>
                 
             `;
