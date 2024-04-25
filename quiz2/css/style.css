@@ -3,6 +3,11 @@
     src: url(../storage/font/Starjout.ttf);
 }
 
+@font-face {
+    font-family: 'th2';
+    src: url(../storage/font/Starjedi.ttf);
+}
+
 body{
     background-image: url(../storage/img/star-wars-darth-vader-in-the-rain-desktop-wallpaper-preview.jpg);
     
@@ -21,4 +26,8 @@ body{
 .tabla{
     border: 1px solid red;
     
+}
+th{
+    font-family: 'th2';
+    font-size: 20px;
 }

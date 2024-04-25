@@ -7,7 +7,7 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
         .then(response => response.json())
         .then(data => {
             const template = `
-            <table class="table table-bordered border-primary table-dark">
+            <table class="table table-bordered border-primary table-secondary">
                 <th><strong>Name:</strong>
                 <th>${data.name}</th>
                 <tr>
@@ -51,7 +51,12 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
                 <th><p id="speciesList"></p></th>
                 </tr>
                 <tr>
-                <th><strong>Naves:</strong></th>
+                <th><strong>vehicles:</strong></th>
+                <th><p id="vehicleslist"></p></th>
+                </tr>
+                <tr>
+                <tr>
+                <th><strong>Starships:</strong></th>
                 <th><p id="starshipsList"></p></th>
                 </tr>
                 <tr>
@@ -85,7 +90,8 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
             fetchAndDisplayInfo(data.homeworld, 'homeworldInfo');
             data.films.forEach(film => fetchAndDisplayInfo(film, 'filmsList'));
             data.species.forEach(species => fetchAndDisplayInfo(species, 'speciesList'));
-            data.starships.forEach(starship => fetchAndDisplayInfo(starship, 'starshipsList'));
+            data.vehicles.forEach(vehicles => fetchAndDisplayInfo(vehicles, 'vehicleslist'));
+            data.starships.forEach(starships => fetchAndDisplayInfo(starships, 'starshipsList'));   
         })
         .catch(error => {
             console.error('Error al consultar el API:', error);
