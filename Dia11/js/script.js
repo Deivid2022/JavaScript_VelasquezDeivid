@@ -22,3 +22,15 @@ function getPokemonInfo() {
                     console.error('Ocurrio un problema con tu función: ', error);
                 });
         }
+
+// Obtener el input
+var input = document.getElementById("pokemonInput");
+
+// Agregar un event listener para detectar cuando se presiona Enter
+input.addEventListener("keyup", function(event) {
+    // Verificar si la tecla presionada es Enter (código 13)
+    if (event.keyCode === 13) {
+        // Llamar a la función getPokemonInfo()
+        getPokemonInfo();
+    }
+});
