@@ -6,16 +6,6 @@ body{
     background-image: linear-gradient(to bottom, #7edbff, #ffffff);
 
 }
-.pokemondata {
-    position: absolute;
-    font-weight: 600;
-    color: #aaa;
-    top: 28vi;
-    right: 27%;
-    font-size: 1.8vi;
-    left: 51vi;
-  }
-
 
 .input1 {
     position: absolute;
@@ -90,16 +80,19 @@ body{
 
 .name{
   position: absolute;
-  top: 23vi;
+  top: 24vi;
   right: 47.5vi;
-  font-size: 1.5vi;
+  font-size: 1.1vi;
   color: black;
   font-family: 'Oxanium', sans-serif;
 }
 
 .gif{
   position: absolute;
-  width: 6vi;
+  width: 5vi;
   top: 15.5vi;
-  left: 42.5vi;
+  left: 43.2vi;
+}
+.color1{
+  color: rgb(145, 145, 145);
 }

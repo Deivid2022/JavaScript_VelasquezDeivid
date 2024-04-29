@@ -12,9 +12,10 @@ function getPokemonInfo(pokemonNameOrId) {
             const pokemonid = data.id;
             const pokemonName = capitalizeFirstLetter(data.name);
             const pokemonAnimatedSpriteUrl = data.sprites.versions['generation-v']['black-white'].animated.front_default;
-            const imagen = `./storage/img/pikachu.png`;
+            const imagen = data.sprites.versions['generation-v']['black-white'].front_default;
 
-            document.getElementById('pokemonid').textContent = `${pokemonid} - ${pokemonName}`;
+            document.getElementById('pokemonid').textContent = `${pokemonid} - `;
+            document.getElementById('pokemonname').textContent = ` ${pokemonName}`
             if (pokemonAnimatedSpriteUrl !== null) {
                 document.getElementById('pokemonImage').src = pokemonAnimatedSpriteUrl;
             } else {
@@ -29,6 +30,7 @@ function getPokemonInfo(pokemonNameOrId) {
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
 const pokemonInput = document.getElementById('pokemonInput');
 const clearBtn = document.getElementById('clearBtn');
 const prevBtn = document.querySelector('.button1');
