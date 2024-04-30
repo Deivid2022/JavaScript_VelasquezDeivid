@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Mystery+Quest");
+
 body{
     background-image: url(../storage/img/fondo.avif);
 }
@@ -20,10 +22,12 @@ body{
 
 .title{
     color: white;
+    font-family: "Mystery Quest", cursive;
 }
 .puntaje{
     font-size: 26px;
     color: white;
+    font-family: "Mystery Quest", cursive;
 }
 .btnfos {
     background-color: #000000cc;
@@ -38,6 +42,7 @@ body{
     position: relative;
     text-transform: uppercase;
     width: 100%;
+    font-family: "Mystery Quest", cursive;
   }
   @media (min-width: 400px) {
     .btnfos {
@@ -105,7 +110,7 @@ body{
     text-shadow: 1px 1px 2px #ffffff;
   }
   
-.card{
+.text-center{
     position: absolute;
     width: 500px;
     left: 700px;
@@ -130,3 +135,30 @@ body{
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
+#contenidoDiv2 {
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.rule{
+  color: black;
+  font-size: 13px;
+}
+#titulo{
+  color: black;
+}
+
+.text-bg-dark{
+  position: absolute;
+  width: 500px;
+  left: 700px;
+}
+.clear-input-btn{
+  position: absolute;
+  left: 510px;
+}

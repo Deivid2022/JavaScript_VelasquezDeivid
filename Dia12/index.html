@@ -16,7 +16,7 @@
         <button id="Quedarse" class="btnfos btnfos-5">Quedarse</button>
     </div>
     <div id="Maquina" class="Maquina">
-        <h2 class="title">Maquina</h2>
+        <h2 class="title">Crupier</h2>
         <div id="Maquina-mano"></div>
         <p id="puntajeMaquina" class="puntaje"></p>
     </div>
@@ -35,6 +35,41 @@
         </div>
       </div>
 
+    <div class="card text-bg-dark mb-3" style="display: block;" id="miDiv2">
+    <div id="fondoTransparente"></div>
+    <div id="contenidoDiv2">
+    <h1 class="card-header" id="titulo">Reglas del Blackjack <button class="clear-input-btn" id="clearBtn">&#10006;</button></h1>
+    <div class="card-body">
+        <div class="rule">
+            <h3>Objetivo del juego:</h3>
+            <p>El objetivo del blackjack es obtener una mano cuyo valor sea lo más cercano posible a 21 sin pasarse.</p>
+        </div>
+        <div class="rule">
+            <h3>Valor de las cartas:</h3>
+            <ul>
+                <li>Las cartas numéricas (del 2 al 10) tienen su valor nominal.</li>
+                <li>Las cartas con figuras (J, Q, K) valen 10 puntos cada una.</li>
+                <li>El As (A) va a valer 11 puntos.</li>
+            </ul>
+        </div>
+        <div class="rule">
+            <h3>Desarrollo del juego:</h3>
+            <ul>
+                <li>Al inicio, el crupier reparte dos cartas boca arriba a cada jugador y dos cartas para sí mismo, una boca arriba y otra boca abajo.</li>
+                <li>El jugador puede decidir si pide más cartas (pedir) para acercarse a 21, o si se queda con las cartas que tiene (quedarse).</li>
+                <li>Si el jugador pide más cartas y su total supera 21, pierde automáticamente (se 'pasa').</li>
+                <li>Después de que todos los jugadores hayan jugado su mano, el crupier revela su segunda carta y juega su mano.</li>
+                <li>El crupier debe pedir cartas adicionales (generalmente hasta que alcance al menos 17 puntos) y luego comparar su total con el de los jugadores.</li>
+                <li>El jugador gana si su mano tiene un valor más alto que la del crupier sin pasarse de 21, o si la mano del crupier se pasa de 21. Si la mano del crupier es igual al jugador, se considera un empate y el jugador no gana ni pierde.</li>
+            </ul>
+        </div>
+        <div class="rule">
+            <h3>Blackjack:</h3>
+            <p>Si un jugador recibe un As (A) y una carta con valor 10 (10, J, Q, K) como sus dos primeras cartas, obtiene un "blackjack" o "21 natural".</p>
+        </div>
+    </div>
+    </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
