@@ -116,6 +116,7 @@ async function JuegoBlackjack() {
 JuegoBlackjack();
 
 document.getElementById("Quedarse").addEventListener("click", function() {
+    document.getElementById("imgrevers").style.display = "none"
     // Agregar un retraso de 2 segundos (2000 milisegundos)
     setTimeout(function() {
       // Mostrar el div
@@ -124,10 +125,15 @@ document.getElementById("Quedarse").addEventListener("click", function() {
     }, 1000);
   });
 
+document.getElementById("mostrarReglasBtn").addEventListener("click", function() {
+    document.getElementById("miDiv2").style.display = "block";
+    document.getElementById("fondoTransparente").style.display = "block";
+});
 
 document.getElementById("clearBtn").addEventListener("click", function() {
     document.getElementById("miDiv2").style.display = "none";
     document.getElementById("fondoTransparente").style.display = "none";
 });
-  
-  
+
+
+

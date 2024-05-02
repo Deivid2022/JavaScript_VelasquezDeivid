@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mystery+Quest");
 
 body{
-    background-image: url(../storage/img/fondo.avif);
+    background-image: url(../storage/img/fondodemesa.jpg);
 }
 
 .jugador{
@@ -161,4 +161,10 @@ body{
 .clear-input-btn{
   position: absolute;
   left: 510px;
+}
+
+.btn-dark{
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
