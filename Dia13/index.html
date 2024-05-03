@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Héroe</title>
+</head>
+<body>
+    <label for="nombreP">Nombre del Personaje:</label>
+    <input type="text" id="nombreP"><br>
+
+    <label for="nombreA">Nombre del Actor:</label>
+    <input type="text" id="nombreA"><br>
+
+    <label for="edad">Edad del Actor:</label>
+    <input type="number" id="edad"><br>
+
+    <label for="ubicacion">Ubicación:</label>
+    <input type="text" id="ubicacion"><br>
+
+    <label for="poster">Poster:</label>
+    <input type="text" id="poster"><br>
+
+    <label for="Fechanacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="Fechanacimiento"><br>
+
+    <label for="Productora">Productora:</label>
+    <select name="Productora" id="Productora">
+        <option value="Marvel">Marvel</option>
+        <option value="DComics">DComics</option>
+    </select><br>
+    
+    <button onclick="AgregarHeroe()">Guardar Héroe</button>
+    <button onclick="MostrarHeroes()">Mostrar Héroes</button>
+
+    <div id="heroesContainer"></div>
+
+</body>
+    <script src="./js/script.js"></script>
+</html>
