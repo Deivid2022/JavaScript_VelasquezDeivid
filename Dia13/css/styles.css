@@ -1,0 +1,57 @@
+.ubi1{
+    position: absolute;
+    width: 560px;
+    top: 50px;
+    left: 350px;
+}
+
+.input1{
+    position: absolute;
+    border-radius: 7px;
+    top: 32px;
+
+}
+.input2{
+    position: absolute;
+    top: 32px;
+    left: 300px;
+    border-radius: 7px;
+    width: 270px;
+}
+
+.text1{
+    position: absolute;
+}
+
+.text2{
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+
+
+.ubi2{
+    position: absolute;
+    width: 560px;
+    top: 150px;
+    left: 350px;
+}
+
+.ubi3{
+    position: absolute;
+    width: 560px;
+    top: 250px;
+    left: 350px;
+}
+.ubi4{
+    position: absolute;
+    width: 560px;
+    top: 350px;
+    left: 350px;
+}
+.ubi5{
+    position: absolute;
+    width: 560px;
+    top: 450px;
+    left: 350px;
+}

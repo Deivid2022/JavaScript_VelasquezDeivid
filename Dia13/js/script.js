@@ -9,34 +9,27 @@ function AgregarHeroe(){
         Productora: document.getElementById('Productora').value
     };
 
-    var datosGuardados = JSON.parse(localStorage.getItem("datos")) || [];
 
-    datosGuardados.push(datos);
 
-    localStorage.setItem("datos", JSON.stringify(datosGuardados));
+    var datosHeroe = JSON.stringify(datos);    
 
-    console.log("Datos guardados:", datos);
-    console.log("Todos los datos:", datosGuardados);
+    var datosRecuperados = JSON.parse(datosHeroe);
+
+    localStorage.setItem("datos", datosRecuperados);
+
+    console.log("Datos guardados:", datosRecuperados);
 }
 
-function MostrarHeroes(){
-    var datosGuardados = JSON.parse(localStorage.getItem("datos")) || [];
-    var container = document.getElementById('heroesContainer');
-    container.innerHTML = '';
 
-    datosGuardados.forEach(function(heroe){
-        var heroCard = document.createElement('div');
-        heroCard.innerHTML = `
-            <h2>${heroe.NombrePersonaje}</h2>
-            <p><strong>Nombre del Actor:</strong> ${heroe.NombreActor}</p>
-            <p><strong>Edad del Actor:</strong> ${heroe.EdadActor}</p>
-            <p><strong>Ubicación:</strong> ${heroe.Ubicacion}</p>
-            <p><strong>Poster:</strong> ${heroe.Poster}</p>
-            <p><strong>Fecha de Nacimiento:</strong> ${heroe.FechaNacimiento}</p>
-            <p><strong>Productora:</strong> ${heroe.Productora}</p>
-        `;
-        container.appendChild(heroCard);
-    });
+function MostrarHeroes(){
+    var personFromLS = localStorage.getItem("datos");
+
+    for(personFromLS of heroe){
+        console.log("Nombre Heroe" + personFromLS.heroe);
+    }
+    
+
+    
 }
 
 
