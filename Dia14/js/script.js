@@ -187,6 +187,12 @@ function disableInputs() {
     });
 }
 
+function cancelar(){
+    clearForm();
+    disableInputs();
+    document.getElementById("heroCostumeSection").style.display = "none";
+}
+
 // Deshabilitar los campos de entrada al cargar la página
 window.onload = function() {
     disableInputs();
