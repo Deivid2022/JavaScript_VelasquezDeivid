@@ -6,7 +6,7 @@ function getPokemonInfo(pokemonNameOrId) {
             if (!response.ok) {
                 throw new Error('Página fuera de servicio');
             }
-            return response.json();
+            return console.log(response.json());
         })
         .then(data => {
             const pokemonid = data.id;

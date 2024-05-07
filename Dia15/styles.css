@@ -1,0 +1,69 @@
+.fondo{
+    position: absolute;
+    background-color: rgb(255, 242, 242);
+    width: 850px;
+    height: 100px;
+    top: 250px;
+    left: 500px;
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+}
+.fondo2{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 850px;
+    height: 300px;
+    top: 350px;
+    left: 500px;
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+}
+.div1{
+    position: absolute;
+    top: 490px;
+    left: 680px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    display: none;
+}
+.div3{
+    position: absolute;
+    top: 490px;
+    left: 620px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    display: none;
+}
+.div{
+    position: absolute;
+    top: 490px;
+    left: 680px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+.div2{
+    position: absolute;
+    top: 280px;
+    left: 850px;
+    border-radius: 100px;
+}
+
+.boton1{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 600px;
+}
+.boton2{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 700px;
+}
