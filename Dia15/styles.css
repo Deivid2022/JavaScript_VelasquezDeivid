@@ -21,7 +21,7 @@
 .div1{
     position: absolute;
     top: 490px;
-    left: 680px;
+    left: 660px;
     width: 500px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
@@ -31,14 +31,14 @@
 .div3{
     position: absolute;
     top: 490px;
-    left: 620px;
+    left: 630px;
     width: 500px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
     text-align: center;
     display: none;
 }
-.div{
+.div4{
     position: absolute;
     top: 490px;
     left: 680px;
@@ -59,11 +59,59 @@
     position: absolute;
     top: 580px;
     width: 40px;
-    left: 600px;
+    left: 650px;
 }
 .boton2{
     position: absolute;
     top: 580px;
     width: 40px;
-    left: 700px;
+    left: 750px;
+}
+.boton3{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 850px;
+}
+.boton4{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 950px;
+}
+.boton5{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 1050px;
+}
+.boton6{
+    position: absolute;
+    top: 580px;
+    width: 40px;
+    left: 1150px;
+}
+
+.div5{
+    position: absolute;
+    top: 440px;
+    left: 660px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(131, 131, 131);
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+
+.div6{
+    position: absolute;
+    top: 440px;
+    left: 660px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(131, 131, 131);
+    font-size: 16px;
+    text-align: center;
+    display: block;
 }

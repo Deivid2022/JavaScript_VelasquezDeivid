@@ -37,3 +37,92 @@ function InfoPerson() {
 }
 
 InfoPerson();
+
+
+
+document.getElementById("boton1").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "block";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("birthday").style.display = "none";
+    document.getElementById("address").style.display = "none";
+    document.getElementById("phone").style.display = "none";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("Name2").style.display = "block";
+    document.getElementById("email2").style.display = "none";
+    document.getElementById("birthday2").style.display = "none";
+    document.getElementById("address2").style.display = "none";
+    document.getElementById("phone2").style.display = "none";
+    document.getElementById("password2").style.display = "none";
+});
+
+document.getElementById("boton2").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "none";
+    document.getElementById("email").style.display = "block";
+    document.getElementById("birthday").style.display = "none";
+    document.getElementById("address").style.display = "none";
+    document.getElementById("phone").style.display = "none";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("Name2").style.display = "none";
+    document.getElementById("email2").style.display = "block";
+    document.getElementById("birthday2").style.display = "none";
+    document.getElementById("address2").style.display = "none";
+    document.getElementById("phone2").style.display = "none";
+    document.getElementById("password2").style.display = "none";
+});
+document.getElementById("boton3").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "none";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("birthday").style.display = "block";
+    document.getElementById("address").style.display = "none";
+    document.getElementById("phone").style.display = "none";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("Name2").style.display = "none";
+    document.getElementById("email2").style.display = "none";
+    document.getElementById("birthday2").style.display = "block";
+    document.getElementById("address2").style.display = "none";
+    document.getElementById("phone2").style.display = "none";
+    document.getElementById("password2").style.display = "none";
+});
+document.getElementById("boton4").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "none";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("birthday").style.display = "none";
+    document.getElementById("address").style.display = "block";
+    document.getElementById("phone").style.display = "none";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("Name2").style.display = "none";
+    document.getElementById("email2").style.display = "none";
+    document.getElementById("birthday2").style.display = "none";
+    document.getElementById("address2").style.display = "block";
+    document.getElementById("phone2").style.display = "none";
+    document.getElementById("password2").style.display = "none";
+});
+document.getElementById("boton5").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "none";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("birthday").style.display = "none";
+    document.getElementById("address").style.display = "none";
+    document.getElementById("phone").style.display = "block";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("Name2").style.display = "none";
+    document.getElementById("email2").style.display = "none";
+    document.getElementById("birthday2").style.display = "none";
+    document.getElementById("address2").style.display = "none";
+    document.getElementById("phone2").style.display = "block";
+    document.getElementById("password2").style.display = "none";
+});
+document.getElementById("boton6").addEventListener("click", function() {
+    document.getElementById("Name").style.display = "none";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("birthday").style.display = "none";
+    document.getElementById("address").style.display = "none";
+    document.getElementById("phone").style.display = "none";
+    document.getElementById("password").style.display = "block";
+    document.getElementById("Name2").style.display = "none";
+    document.getElementById("email2").style.display = "none";
+    document.getElementById("birthday2").style.display = "none";
+    document.getElementById("address2").style.display = "none";
+    document.getElementById("phone2").style.display = "none";
+    document.getElementById("password2").style.display = "block";
+});
+
