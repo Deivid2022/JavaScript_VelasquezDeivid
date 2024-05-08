@@ -12,7 +12,15 @@ function InfoPerson() {
             let firstName = data.results[0].name.first;
             let lastName = data.results[0].name.last;
             let emailPerson = data.results[0].email;
+
+            //Fecha de Nacimiento;
             let birthdayPerson = data.results[0].dob.date;
+            let birthdayPerson2 = birthdayPerson.slice(0,10);
+            let arraybirthday = birthdayPerson2.split('-');
+            let ano = arraybirthday[0];
+            let mes = arraybirthday[1];
+            let dia = arraybirthday[2];
+            let birthdayFinal = mes + '/' + dia + '/' + ano
             let addressNumber = data.results[0].location.street.number;
             let addressName = data.results[0].location.street.name;
             let phonePerson = data.results[0].phone;
@@ -23,7 +31,7 @@ function InfoPerson() {
             
             document.getElementById('Name').textContent = `${firstName} ${lastName}`;
             document.getElementById('email').textContent = `${emailPerson}`;
-            document.getElementById('birthday').textContent = `${birthdayPerson}`;
+            document.getElementById('birthday').textContent = `${birthdayFinal}`;
             document.getElementById('address').textContent = `${addressNumber} ${addressName}`;
             document.getElementById('phone').textContent = `${phonePerson}`;
             document.getElementById('password').textContent = `${paswordPerson}`;
