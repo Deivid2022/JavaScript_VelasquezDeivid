@@ -40,7 +40,7 @@ InfoPerson();
 
 
 
-document.getElementById("boton1").addEventListener("click", function() {
+document.getElementById("boton1").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "block";
     document.getElementById("email").style.display = "none";
     document.getElementById("birthday").style.display = "none";
@@ -55,7 +55,7 @@ document.getElementById("boton1").addEventListener("click", function() {
     document.getElementById("password2").style.display = "none";
 });
 
-document.getElementById("boton2").addEventListener("click", function() {
+document.getElementById("boton2").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "none";
     document.getElementById("email").style.display = "block";
     document.getElementById("birthday").style.display = "none";
@@ -69,7 +69,7 @@ document.getElementById("boton2").addEventListener("click", function() {
     document.getElementById("phone2").style.display = "none";
     document.getElementById("password2").style.display = "none";
 });
-document.getElementById("boton3").addEventListener("click", function() {
+document.getElementById("boton3").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "none";
     document.getElementById("email").style.display = "none";
     document.getElementById("birthday").style.display = "block";
@@ -83,7 +83,7 @@ document.getElementById("boton3").addEventListener("click", function() {
     document.getElementById("phone2").style.display = "none";
     document.getElementById("password2").style.display = "none";
 });
-document.getElementById("boton4").addEventListener("click", function() {
+document.getElementById("boton4").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "none";
     document.getElementById("email").style.display = "none";
     document.getElementById("birthday").style.display = "none";
@@ -97,7 +97,7 @@ document.getElementById("boton4").addEventListener("click", function() {
     document.getElementById("phone2").style.display = "none";
     document.getElementById("password2").style.display = "none";
 });
-document.getElementById("boton5").addEventListener("click", function() {
+document.getElementById("boton5").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "none";
     document.getElementById("email").style.display = "none";
     document.getElementById("birthday").style.display = "none";
@@ -111,7 +111,7 @@ document.getElementById("boton5").addEventListener("click", function() {
     document.getElementById("phone2").style.display = "block";
     document.getElementById("password2").style.display = "none";
 });
-document.getElementById("boton6").addEventListener("click", function() {
+document.getElementById("boton6").addEventListener("mouseover", function() {
     document.getElementById("Name").style.display = "none";
     document.getElementById("email").style.display = "none";
     document.getElementById("birthday").style.display = "none";
